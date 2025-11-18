@@ -1,0 +1,25 @@
+# Ignore Windows system files
+Thumbs.db
+Desktop.ini
+*.log
+
+# Ignore temporary files
+*.tmp
+*.bak
+
+# Ignore compiled executables if any
+*.exe
+*.obj
+*.dll
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+*.suo
+*.user
+*.ncb
+*.opensdf
+
+# yes be ignored
+bin/
+src/root
