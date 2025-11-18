@@ -1,9 +1,10 @@
 [THE PEKORA PROJECT] - [A GROUP PROJECT BY BLUEHOUSE STUDIO]
 
-"こんぺこ、こんぺこ、こんぺこ！ホロライブ三期制の兎田ぺこらぺこ！どうも、どうも！"
-"Konpeko, konpeko, konpeko! Hololive san-kisei no Usada Pekora-peko! doumo, doumo!"
-A Certain Holomember Named Usada Pekora From Hololive JP 3rd Gen
+- "こんぺこ、こんぺこ、こんぺこ！ホロライブ三期制の兎田ぺこらぺこ！どうも、どうも！"
+- "Konpeko, konpeko, konpeko! Hololive san-kisei no Usada Pekora-peko! doumo, doumo!"
+- A Certain Holomember Named Usada Pekora From Hololive JP 3rd Gen
 
+===================================
 [Project Description]
 
  Pekora Operating System (PekoraOS or PekOs) Is Created From Being a Fan And
@@ -20,6 +21,7 @@ A Certain Holomember Named Usada Pekora From Hololive JP 3rd Gen
  Yes OsDev From Scratch (ie: ASSEMBLY, C# And C++) So This is Technically
  What The Real Pekora OS Would Look Like.
 
+===================================
 [Project Purpose]
 
 The Project's Purpose is to Test And See How Far We Could Take Batch Scripting And By Creating A
@@ -33,6 +35,7 @@ Of The Project Requirements Which Are Listed Below And Where All Followed Correc
 - File search and report generation
 - Network connectivity checker (ping test with log results)
 
+===================================
 [List of Commands Used Plus Their Count]
 
 - title = 1
@@ -56,8 +59,10 @@ Of The Project Requirements Which Are Listed Below And Where All Followed Correc
 
 The Entire PekoraOS.bat Code line is 823 Lines Of Code
 
+===================================
 [Sample Output (with screenshots)]
 
+===================================
 [Brief explanation of how the script work]
 
 When On First Launch The Batch Script Does a KAELA (HololiveID Gen3) FILE INTEGRITY CHECK, To See
