@@ -2,9 +2,10 @@
 
 "こんぺこ、こんぺこ、こんぺこ！ホロライブ三期制の兎田ぺこらぺこ！どうも、どうも！"
 "Konpeko, konpeko, konpeko! Hololive san-kisei no Usada Pekora-peko! doumo, doumo!"
-- A Certain Holomember Named Usada Pekora From Hololive JP 3rd Gen
+A Certain Holomember Named Usada Pekora From Hololive JP 3rd Gen
 
-- Project Description 
+[Project Description]
+
  Pekora Operating System (PekoraOS or PekOs) Is Created From Being a Fan And
  Inspiration From A Virtual Youtuber (Vtuber) From Hololive (Cover Corp)
  Named Usada Pekora From Hololive JP (Japan) GEN (GENERATION) 3
@@ -19,45 +20,46 @@
  Yes OsDev From Scratch (ie: ASSEMBLY, C# And C++) So This is Technically
  What The Real Pekora OS Would Look Like.
 
-- Project Purpose
+[Project Purpose]
+
 The Project's Purpose is to Test And See How Far We Could Take Batch Scripting And By Creating A
 Mini OS Within Batch Script That Hold all Of Its Contents From the entire p:\ folder structure
 and outputing its own batch file under p:\bin simulating a mini linux OS type, And has Followed All
 Of The Project Requirements Which Are Listed Below And Where All Followed Correctly.
 
--File or folder backup automation
--System information display (CPU, memory, disk, etc.)
--User login simulation or menu-based tool
--File search and report generation
--Network connectivity checker (ping test with log results)
+- File or folder backup automation
+- System information display (CPU, memory, disk, etc.)
+- User login simulation or menu-based tool
+- File search and report generation
+- Network connectivity checker (ping test with log results)
 
-- List of Commands Used Plus Their Count
-| Command                | Count |
-| ---------------------- | ----- |
-| **echo**               | 122   |
-| **echo.** (blank echo) | 52    |
-| **call**               | 67    |
-| **for**                | 62    |
-| **timeout**            | 52    |
-| **set**                | 36    |
-| **if**                 | 28    |
-| **goto**               | 18    |
-| **mkdir**              | 13    |
-| **cls**                | 7     |
-| **exit**               | 3     |
-| **rem**                | 2     |
-| **setlocal**           | 2     |
-| **title**              | 1     |
-| **mode**               | 1     |
-| **rmdir**              | 1     |
-| **cmd**                | 1     |
-| **endlocal**           | 1     |
+[List of Commands Used Plus Their Count]
+
+- title = 1
+- mode = 1
+- setlocal = 2
+- call = 67
+- echo. = 52
+- for = 62
+- timeout = 52
+- if = 28
+- echo = 122
+- goto = 18
+- rmdir = 1
+- cls = 7
+- mkdir = 13
+- set = 36
+- endlocal = 1
+- rem = 2
+- cmd = 1
+- exit = 3
 
 The Entire PekoraOS.bat Code line is 823 Lines Of Code
 
-- Sample Output (with screenshots)
+[Sample Output (with screenshots)]
 
-- Brief explanation of how the script works
+[Brief explanation of how the script work]
+
 When On First Launch The Batch Script Does a KAELA (HololiveID Gen3) FILE INTEGRITY CHECK, To See
 If p:\ (root = \) Is Present, if not it would Initiate the First Run Setup, If p:\ Is Present
 It Checks For a Flag if the setup was complete and not interupted, if the flag was found it boots
