@@ -62,6 +62,12 @@ The Entire PekoraOS.bat Code line is 823 Lines Of Code
 ===================================
 [Sample Output (with screenshots)]
 
+![Example Image](/images/MainPekoraOS-Example.png)
+![Example Image](/images/PekoOSKFMSIC_Example.png)
+![Example Image](/images/PekoOS_KORONEBootloader-Example.png)
+![Example Image](/images/PekoOSLogin-Example.png)
+![Example Image](/images/PekoraShellStartup-Example.png)
+
 ===================================
 [Brief explanation of how the script work]
 
