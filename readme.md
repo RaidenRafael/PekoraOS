@@ -1,5 +1,7 @@
 [THE PEKORA PROJECT] - [A GROUP PROJECT BY BLUEHOUSE STUDIO]
 
+[WARNING: THIS BATCH SCRIPT WILL NOT RUN OUTSIDE OF WINDOWS 10 (i.e: Windows 8.1 or Windows 11) As Things Will BREAK!]
+
 - "こんぺこ、こんぺこ、こんぺこ！ホロライブ三期制の兎田ぺこらぺこ！どうも、どうも！"
 - "Konpeko, konpeko, konpeko! Hololive san-kisei no Usada Pekora-peko! doumo, doumo!"
 - A Certain Holomember Named Usada Pekora From Hololive JP 3rd Gen
