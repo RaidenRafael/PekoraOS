@@ -1,3 +1,7 @@
+:: Commenting And Documentation
+:: Was Done By Me And Kobo Kanaeru's Live Streams
+:: Quak
+
 @echo off
 title Pekora-OS
 mode 100,30
