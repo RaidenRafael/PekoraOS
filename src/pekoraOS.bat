@@ -241,12 +241,11 @@ for /l %%i in (1,1,10) do (
     timeout /t 0 >nul
 )
 echo  DONE!
-(
-  echo username=%USERNAME%
-  echo password=%PASSWORD%
-  echo permission=admin
-  echo created=%DATE% %TIME%
-) > "root/users/%USERNAME%.conf"
+if not exist "root/users" mkdir "root/users"
+> "root/users/%USERNAME%.conf" echo username=%USERNAME%
+>> "root/users/%USERNAME%.conf" echo password=%PASSWORD%
+>> "root/users/%USERNAME%.conf" echo permission=admin
+>> "root/users/%USERNAME%.conf" echo created=%DATE% %TIME%
 
 :: Create user home directory And its Content
 echo .
