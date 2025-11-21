@@ -1,5 +1,5 @@
 :: Commenting And Documentation
-:: Was Done By Me And Kobo Kanaeru's Live Streams
+:: Was Done By Miguel Rafael Guevarra (me!) And Kobo Kanaeru's Live Streams
 :: Quak
 
 @echo off
@@ -162,32 +162,31 @@ for /l %%i in (1,1,20) do (
     timeout /t 0 >nul
 )
 echo DONE!
-(
-    echo @echo off
-    echo setlocal enabledelayedexpansion
-    echo.
-    echo echo =========================================
-    echo echo  ABOUT SYSTEM - PEKORA OPERATING SYSTEM
-    echo echo =========================================
-    echo echo.
-    echo echo Lead Programer And Developer: Raiden Rafael ^(Miguel Rafael Guevarra^)
-    echo echo.
-    echo echo Pekora Operating System ^(PekoraOS or PekOs^) Is Created From Being a Fan And
-    echo echo Inspiration From A Virtual Youtuber ^(Vtuber^) From Hololive ^(Cover Corp^)
-    echo echo Named Usada Pekora From Hololive JP ^(Japan^) GEN ^(GENERATION^) 3
-    echo echo.
-    echo echo Pekora Operating System Is Desinged Towards Os Simulation Within Batch Script
-    echo echo And Following The Style Of a Linux Like System But Modified And Filled With
-    echo echo Hololive Names and References Within The System Simulator Itself And A Way
-    echo echo To Test The Limits Of A Batch Scripting And Go Beyond What Simplicity You
-    echo echo Can Do Inside a Simple Single Batch Script File
-    echo echo.
-    echo echo But This Was Also My Trial Coding For Ongoing Real Pekora OS OSDEV
-    echo echo Yes OsDev From Scratch ^(ie: ASSEMBLY, C^# And C^+^+^) So This is Technically
-    echo echo What The Real Pekora OS Would Look Like.
-    echo.
-    echo echo Credits For All Mentioned Hololive Members And Inspiration
-) > "root/bin/about.bat"
+if not exist "root/bin" mkdir "root/bin"
+> "root/bin/about.bat" echo @echo off
+>> "root/bin/about.bat" echo setlocal enabledelayedexpansion
+>> "root/bin/about.bat" echo.
+>> "root/bin/about.bat" echo echo =========================================
+>> "root/bin/about.bat" echo echo ABOUT SYSTEM - PEKORA OPERATING SYSTEM
+>> "root/bin/about.bat" echo echo =========================================
+>> "root/bin/about.bat" echo echo.
+>> "root/bin/about.bat" echo echo Lead Programer And Developer: Raiden Rafael ^(Miguel Rafael Guevarra^)
+>> "root/bin/about.bat" echo echo.
+>> "root/bin/about.bat" echo echo Pekora Operating System ^(PekoraOS or PekOs^) Is Created From Being a Fan And
+>> "root/bin/about.bat" echo echo Inspiration From A Virtual Youtuber ^(Vtuber^) From Hololive ^(Cover Corp^)
+>> "root/bin/about.bat" echo echo Named Usada Pekora From Hololive JP ^(Japan^) GEN ^(GENERATION^) 3
+>> "root/bin/about.bat" echo echo.
+>> "root/bin/about.bat" echo echo Pekora Operating System Is Desinged Towards Os Simulation Within Batch Script
+>> "root/bin/about.bat" echo echo And Following The Style Of a Linux Like System But Modified And Filled With
+>> "root/bin/about.bat" echo echo Hololive Names and References Within The System Simulator Itself And A Way
+>> "root/bin/about.bat" echo echo To Test The Limits Of A Batch Scripting And Go Beyond What Simplicity You
+>> "root/bin/about.bat" echo echo Can Do Inside a Simple Single Batch Script File
+>> "root/bin/about.bat" echo echo.
+>> "root/bin/about.bat" echo echo But This Was Also My Trial Coding For Ongoing Real Pekora OS OSDEV
+>> "root/bin/about.bat" echo echo Yes OsDev From Scratch ^(ie: ASSEMBLY, C^# And C^+^+^) So This is Technically
+>> "root/bin/about.bat" echo echo What The Real Pekora OS Would Look Like.
+>> "root/bin/about.bat" echo.
+>> "root/bin/about.bat" echo echo Credits For All Mentioned Hololive Members And Inspiration
 
 
 <nul set /p="[Pekora_KAELA-FM]: Installing root\bin\credits.bat"
@@ -196,24 +195,23 @@ for /l %%i in (1,1,20) do (
     timeout /t 0 >nul
 )
 echo DONE!
-(
-    echo @echo off
-    echo setlocal enabledelayedexpansion
-    echo.
-    echo echo ===================================
-    echo echo  CREDITS TO THE GROUP DEVELOPMENT   
-    echo echo ===================================
-    echo echo.
-    echo.
-    echo echo A BSIT-2E Group Project, Created By BlueHouse Studio
-    echo echo A Hololive Themed Project, The "Pekora Project"
-    echo echo.
-    echo echo Group Project Leader: Angeljhay Dava
-    echo echo Group Member 1: Miguel Rafael Guevarra
-    echo echo Group Member 2: Angel Clarence Opinga Gado
-    echo echo Group Member 3: James Maverick Alberto
-    echo echo.
-) > "root/bin/credits.bat"
+if not exist "root/bin" mkdir "root/bin"
+> "root/bin/credits.bat" echo @echo off
+>> "root/bin/credits.bat" echo setlocal enabledelayedexpansion
+>> "root/bin/credits.bat" echo.
+>> "root/bin/credits.bat" echo echo ===================================
+>> "root/bin/credits.bat" echo echo  CREDITS TO THE GROUP DEVELOPMENT   
+>> "root/bin/credits.bat" echo echo ===================================
+>> "root/bin/credits.bat" echo echo.
+>> "root/bin/credits.bat" echo.
+>> "root/bin/credits.bat" echo echo A BSIT-2E Group Project, Created By BlueHouse Studio
+>> "root/bin/credits.bat" echo echo A Hololive Themed Project, The "Pekora Project"
+>> "root/bin/credits.bat" echo echo.
+>> "root/bin/credits.bat" echo echo Group Project Leader: Angeljhay Dava
+>> "root/bin/credits.bat" echo echo Group Member 1: Miguel Rafael Guevarra
+>> "root/bin/credits.bat" echo echo Group Member 2: Angel Clarence Opinga Gado
+>> "root/bin/credits.bat" echo echo Group Member 3: James Maverick Alberto
+>> "root/bin/credits.bat" echo echo.
 
 <nul set /p="[Pekora_KAELA-FM]: Installing root\bin\netping.bat"
 for /l %%i in (1,1,20) do (
@@ -221,14 +219,13 @@ for /l %%i in (1,1,20) do (
     timeout /t 0 >nul
 )
 echo DONE!
-(
-    echo @echo off
-    echo if "%%1"=="" ^(
-    echo ^    echo Usage: ping "^<address^>"
-    echo ^    exit /b
-    echo ^)
-    echo ping %%1
-) > "root/bin/netping.bat"
+if not exist "root/bin" mkdir "root/bin"
+> "root/bin/netping.bat" echo @echo off
+>> "root/bin/netping.bat" echo if "%%1"=="" ^(
+>> "root/bin/netping.bat" echo ^    echo Usage: ping "^<address^>"
+>> "root/bin/netping.bat" echo ^    exit /b
+>> "root/bin/netping.bat" echo ^)
+>> "root/bin/netping.bat" echo ping %%1
 
 echo.
 call :CenterText "###############################################"
