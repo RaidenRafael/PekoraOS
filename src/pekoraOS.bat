@@ -46,7 +46,7 @@ for /l %%i in (1,1,20) do (
     <nul set /p="."
     timeout /t 0 >nul
 )
-if exist root\system\setup.done (
+if exist root/system/setup.done (
     echo FOUND
     echo.
     call :CenterText "#############################################"
@@ -232,8 +232,8 @@ call :CenterText "###############################################"
 call :CenterText "#           PEKOACCOUNT USER SETUP            #"
 call :CenterText "###############################################"
 echo.
-set /p USERNAME=Enter PekoAccount Username: 
-set /p PASSWORD=Enter PekoAccount Password: 
+set /p PEKO_USERNAME=Enter PekoAccount Username: 
+set /p PEKO_PASSWORD=Enter PekoAccount Password: 
 
 <nul set /p="[Pekora_KAELA-FM]: Creating User Profile"
 for /l %%i in (1,1,10) do (
@@ -242,65 +242,65 @@ for /l %%i in (1,1,10) do (
 )
 echo  DONE!
 if not exist "root/users" mkdir "root/users"
-> "root/users/%USERNAME%.conf" echo username=%USERNAME%
->> "root/users/%USERNAME%.conf" echo password=%PASSWORD%
->> "root/users/%USERNAME%.conf" echo permission=admin
->> "root/users/%USERNAME%.conf" echo created=%DATE% %TIME%
+> "root/users/%PEKO_USERNAME%.conf" echo username=%PEKO_USERNAME%
+>> "root/users/%PEKO_USERNAME%.conf" echo password=%PEKO_PASSWORD%
+>> "root/users/%PEKO_USERNAME%.conf" echo permission=admin
+>> "root/users/%PEKO_USERNAME%.conf" echo created=%DATE% %TIME%
 
 :: Create user home directory And its Content
 echo .
-<nul set /p="[Pekora_KAELA-FM]: Creating Home Folder root\home\%USERNAME%"
+<nul set /p="[Pekora_KAELA-FM]: Creating Home Folder root\home\%PEKO_USERNAME%"
 for /l %%i in (1,1,5) do (
     <nul set /p="."
     timeout /t 0 >nul
 )
 echo  DONE!
-mkdir "root/home/%USERNAME%"
-<nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%USERNAME%\Public"
+mkdir "root/home/%PEKO_USERNAME%"
+<nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%PEKO_USERNAME%\Public"
 for /l %%i in (1,1,5) do (
     <nul set /p="."
     timeout /t 0 >nul
 )
 echo  DONE!
-mkdir "root/home/%USERNAME%/Public"
-<nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%USERNAME%\Downloads"
+mkdir "root/home/%PEKO_USERNAME%/Public"
+<nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%PEKO_USERNAME%\Downloads"
 for /l %%i in (1,1,5) do (
     <nul set /p="."
     timeout /t 0 >nul
 )
 echo  DONE!
-mkdir "root/home/%USERNAME%/Downloads"
-<nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%USERNAME%\Documents"
+mkdir "root/home/%PEKO_USERNAME%/Downloads"
+<nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%PEKO_USERNAME%\Documents"
 for /l %%i in (1,1,5) do (
     <nul set /p="."
     timeout /t 0 >nul
 )
 echo  DONE!
-mkdir "root/home/%USERNAME%/Documents"
-<nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%USERNAME%\Videos"
+mkdir "root/home/%PEKO_USERNAME%/Documents"
+<nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%PEKO_USERNAME%\Videos"
 for /l %%i in (1,1,5) do (
     <nul set /p="."
     timeout /t 0 >nul
 )
 echo  DONE!
-mkdir "root/home/%USERNAME%/Videos"
-<nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%USERNAME%\Music"
+mkdir "root/home/%PEKO_USERNAME%/Videos"
+<nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%PEKO_USERNAME%\Music"
 for /l %%i in (1,1,5) do (
     <nul set /p="."
     timeout /t 0 >nul
 )
 echo  DONE!
-mkdir "root/home/%USERNAME%/Music"
-<nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%USERNAME%\Pictures"
+mkdir "root/home/%PEKO_USERNAME%/Music"
+<nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%PEKO_USERNAME%\Pictures"
 for /l %%i in (1,1,5) do (
     <nul set /p="."
     timeout /t 0 >nul
 )
 echo  DONE!
-mkdir "root/home/%USERNAME%/Pictures"
+mkdir "root/home/%PEKO_USERNAME%/Pictures"
 
 REM Create marker so system never re-runs setup again
-echo setup_completed=true > root\system\setup.done
+echo setup_completed=true > root/system/setup.done
 
 echo.
 call :CenterText "###############################################"
@@ -449,8 +449,8 @@ call :CenterText "============================"
 echo.
 
 :: Load Last Login info
-if exist root\config\lastlogin.conf (
-    for /f "tokens=1,2 delims==" %%A in (root\config\lastlogin.conf) do (
+if exist root/config/lastlogin.conf (
+    for /f "tokens=1,2 delims==" %%A in (root/config/lastlogin.conf) do (
         if /i "%%A"=="LastUser" set LASTUSER=%%B
         if /i "%%A"=="LastLogin" set LASTLOGIN=%%B
     )
