@@ -227,8 +227,7 @@ if not exist "root/bin" mkdir "root/bin"
 >> "root/bin/netping.bat" echo ^)
 >> "root/bin/netping.bat" echo ping %%1
 
-IF NOT EXIST root\system\setup.done (
-    :: CREATE USER
+:CreateUserAccount
     echo.
     call :CenterText "###############################################"
     call :CenterText "#           PEKOACCOUNT USER SETUP            #"
@@ -243,67 +242,72 @@ IF NOT EXIST root\system\setup.done (
         timeout /t 0 >nul
     )
     echo  DONE!
-    if not exist "root/users" mkdir "root/users"
-    > "root/users/!PEKO_USERNAME!.conf" echo username=!PEKO_USERNAME!
-    >> "root/users/!PEKO_USERNAME!.conf" echo password=!PEKO_PASSWORD!
-    >> "root/users/!PEKO_USERNAME!.conf" echo permission=admin
-    >> "root/users/!PEKO_USERNAME!.conf" echo created=%DATE% %TIME%
+    if not exist "root\users" mkdir "root\users"
+    > "root\users\%PEKO_USERNAME%.conf" echo username=%PEKO_USERNAME%
+    >> "root\users\%PEKO_USERNAME%.conf" echo password=%PEKO_PASSWORD%
+    >> "root\users\%PEKO_USERNAME%.conf" echo permission=admin
+    >> "root\users\%PEKO_USERNAME%.conf" echo created=%DATE% %TIME%
 
     :: Create user home directory And its Content
-    echo .
-    <nul set /p="[Pekora_KAELA-FM]: Creating Home Folder root\home\!PEKO_USERNAME!"
+    echo.
+    <nul set /p="[Pekora_KAELA-FM]: Creating Home Folder root\home\%PEKO_USERNAME%"
     for /l %%i in (1,1,5) do (
         <nul set /p="."
         timeout /t 0 >nul
     )
     echo  DONE!
-    mkdir "root/home/!PEKO_USERNAME!"
-    <nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\!PEKO_USERNAME!\Public"
+    mkdir "root\home\%PEKO_USERNAME%"
+    
+    <nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%PEKO_USERNAME%\Public"
     for /l %%i in (1,1,5) do (
         <nul set /p="."
         timeout /t 0 >nul
     )
     echo  DONE!
-    mkdir "root/home/!PEKO_USERNAME!/Public"
-    <nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\!PEKO_USERNAME!\Downloads"
+    mkdir "root\home\%PEKO_USERNAME%\Public"
+    
+    <nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%PEKO_USERNAME%\Downloads"
     for /l %%i in (1,1,5) do (
         <nul set /p="."
         timeout /t 0 >nul
     )
     echo  DONE!
-    mkdir "root/home/!PEKO_USERNAME!/Downloads"
-    <nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\!PEKO_USERNAME!\Documents"
+    mkdir "root\home\%PEKO_USERNAME%\Downloads"
+    
+    <nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%PEKO_USERNAME%\Documents"
     for /l %%i in (1,1,5) do (
         <nul set /p="."
         timeout /t 0 >nul
     )
     echo  DONE!
-    mkdir "root/home/!PEKO_USERNAME!/Documents"
-    <nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\!PEKO_USERNAME!\Videos"
+    mkdir "root\home\%PEKO_USERNAME%\Documents"
+    
+    <nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%PEKO_USERNAME%\Videos"
     for /l %%i in (1,1,5) do (
         <nul set /p="."
         timeout /t 0 >nul
     )
     echo  DONE!
-    mkdir "root/home/!PEKO_USERNAME!/Videos"
-    <nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\!PEKO_USERNAME!\Music"
+    mkdir "root\home\%PEKO_USERNAME%\Videos"
+    
+    <nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%PEKO_USERNAME%\Music"
     for /l %%i in (1,1,5) do (
         <nul set /p="."
         timeout /t 0 >nul
     )
     echo  DONE!
-    mkdir "root/home/!PEKO_USERNAME!/Music"
-    <nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\!PEKO_USERNAME!\Pictures"
+    mkdir "root\home\%PEKO_USERNAME%\Music"
+    
+    <nul set /p="[Pekora_KAELA-FM]: Creating Folder root\home\%PEKO_USERNAME%\Pictures"
     for /l %%i in (1,1,5) do (
         <nul set /p="."
         timeout /t 0 >nul
     )
     echo  DONE!
-    mkdir "root/home/!PEKO_USERNAME!/Pictures"
+    mkdir "root\home\%PEKO_USERNAME%\Pictures"
 
-    REM Create marker so system never re-runs setup again
-    echo setup_completed=true > root/system/setup.done
-)
+REM Create marker so system never re-runs setup again
+echo setup_completed=true > root/system/setup.done
 
 echo.
 call :CenterText "###############################################"
